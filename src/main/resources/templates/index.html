@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>达梦数据库 Mybatis 增删改查</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body style="text-align: center">
+<h2>达梦数据库 Mybatis 增删改查</h2>
+<div class="op" style="margin-top: 120px;">
+    <button type="button" id="version">数据库版本</button>
+    <button type="button" id="jdbc">jdbc查询</button>
+    <button type="button" id="mybatis">Mybatis查询</button>
+    <button type="button" id="insert">Mybatis保存</button>
+    <button type="button" id="delete">Mybatis删除</button>
+</div>
+<div class="response-container" style="margin-top: 20px;">
+
+</div>
+<script>
+    $(function () {
+
+        $('#version').click(() => {
+            $.getJSON('/db-version', function (res) {
+                console.log(res);
+                $('.response-container')[0].innerHTML = JSON.stringify(res);
+            })
+        })
+        $('#jdbc').click(() => {
+            $.getJSON('/1', function (res) {
+                console.log(res);
+                $('.response-container')[0].innerHTML = JSON.stringify(res);
+            })
+        })
+        $('#mybatis').click(() => {
+            $.getJSON('/2', function (res) {
+                console.log(res);
+                $('.response-container')[0].innerHTML = JSON.stringify(res);
+            })
+        })
+        $('#insert').click(() => {
+            $.getJSON('/insert', function (res) {
+                console.log(res);
+                $('.response-container')[0].innerHTML = JSON.stringify(res);
+            })
+        })
+        $('#delete').click(() => {
+            $.getJSON('/delete', function (res) {
+                console.log(res);
+                $('.response-container')[0].innerHTML = JSON.stringify(res);
+            })
+        })
+
+    })
+</script>
+</body>
+</html>
