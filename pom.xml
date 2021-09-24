@@ -71,23 +71,4 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>maven-public</id>
-            <url>http://community.winning.com.cn:8088/repository/maven-public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <name>mirror.repo1.maven.org</name>
-            <id>mirror.winning.com.cn</id>
-            <url>http://community.winning.com.cn:8088/repository/maven-public/</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
